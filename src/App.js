@@ -1,9 +1,12 @@
 import './App.css';
+import harvardArt from './data/harvardArt';
+
+console.log(harvardArt);
 
 function App() {
   return (
     <div>
-      <h1>React App</h1>
+      <h1>Hello from App</h1>
     </div>
   );
 }

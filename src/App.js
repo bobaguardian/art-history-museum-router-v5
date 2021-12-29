@@ -12,8 +12,8 @@ function App() {
 
       <Switch>
         <Route exact path='/'>
-          <h2>Harvard Art Museum</h2>
-          <p>Look, but Don't Touch. Please select a Gallery in the navigation bar.</p>
+          <h1>Harvard Art Museum</h1>
+          <p className="center">Look, but Don't Touch. Please select a Gallery in the navigation bar.</p>
         </Route>
         <Route path='/galleries/:galleryId'>
           <GalleryView galleries={harvardArt.records} />

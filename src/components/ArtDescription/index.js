@@ -1,18 +1,24 @@
 
 import { Link } from 'react-router-dom';
 
+import './ArtDescription.css';
+
 const ArtDescription = ({ gallery }) => {
-  console.log("IN ART DESCRIPTION", gallery);
   return (
     <div>
-      <h1>Hello from Art Description</h1>
-      {gallery.objects.map((art) => {
+      {gallery.objects.map((art) => (
+        <div className="description flex">
+          <h2>{art.title}</h2>
+          <img src={art.primaryimageurl}></img>
+          {art.description ? <p>Description: {art.description}</p> : null}
+          {art.creditline ? <p>Credit: {art.creditline}</p> : null}
+          {art.technique ? <p>Technique: {art.technique}</p> : null}
+          <a href={art.url}>Artwork Link</a>
+        </div>
 
-      })}
+      ))}
+
       <Link to={`/galleries/${gallery.id}`}>Back to Gallery {gallery.name}</Link>
-      {/* <p>Description: {gallery.description}</p>
-      <p>Credit: {gallery.credit}</p>
-      <p>Technique: {gallery.technique}</p> */}
 
     </div>
   );
